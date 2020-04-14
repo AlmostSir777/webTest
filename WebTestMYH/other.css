@@ -1,0 +1,6 @@
+body{background-color: yellow;}
+p{color: blue;}
+h1{background-color: red;text-align: center;}
+h2{background-color: white;text-align: left;}
+h3{background-color: tomato;text-align: right;}
+#img1{width: 375*0.5; height: 667*0.5;margin-left: 100;}

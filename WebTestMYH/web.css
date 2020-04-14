@@ -1,0 +1,41 @@
+
+/* -----------------------nav 一级导航----------------- */
+/* header { width: 100%; background: #222; height: 70px; border-bottom: #464647 1px solid; }
+header nav { margin: 0 auto; width: 1000px; text-align: center; padding-top: 15px }
+header nav ul li { line-height: 40px; display: inline }
+header nav ul li a { color: #E7E7E7; display: block; padding: 0 20px; margin-right: 10px; float: left }
+header nav ul li a:hover, #nav_current { color: #fff; background: rgba(20, 20, 20, 0.8); box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7); border-radius: 6px; } */
+/* b{
+    color:burlywood;
+    text-align: left;
+    display: block;
+}
+strong
+{
+  color: brown;
+  text-align: left;
+  font: outline;
+  background-color: aquamarine;
+}
+body{
+   /* background-color: #222 */
+   /* background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521017082391&di=fabc5bf7076fcf7337da84752d69ca81&imgtype=0&src=http%3A%2F%2Fimg5.xiazaizhijia.com%2Fwalls%2F20160708%2F1440x900_2f172c09d079701.jpg) center/cover no-repeat
+}
+input{
+  background-color: #FFCC00;
+}
+#p1{
+    background-color: #FFCC00
+}.red{color:red}
+#p2{
+    background-color: #0ff00f
+}.red{color:red} */ */
+#img1{
+  align-content: center;
+  width: 600;
+  height: 800;
+  display: block;
+}
+#img2{
+  align-content: center;
+}
