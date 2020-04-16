@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>输入框学习</title>
+        <meta charset="utf-8">
+    </header>
+    <body>
+        <iframe src="./table.html" name="iframe_a" width="200" height="400" frameborder="0" ></iframe>
+        <p><a href="http://www.baidu.com" target="iframe_a">run</a></p>
+        <form action="">
+        first name:<input type="text" name="username"><br>
+        last name:<input type="password" name="password"> 
+        </form>
+        <p style="color: red;font-size: 17px;font-weight: bold;">性别选择 
+            <form>
+                <input type="radio" name="sex" value="man">man<br>
+                <input type="radio" name="sex" value="woman">woman
+            </form>
+        </p>
+        <br>
+        <form action="">
+            <input type="button" value="我是一个按钮">
+        </form>
+        <br>
+        <form action="">
+            <select name="cars" id="xxx">
+                <option value="volvo">volvo</option>
+                <option value="BMW">BMW</option>
+                <option value="benci" selected>benci</option>
+                <option value="audi">audi</option>
+            </select>
+        </form>
+        <form action="">
+            <fieldset>
+                <legend>personal information:</legend>
+                Name:<input type="text" size="30"><br>
+                E-mail:<input type="text" size="30"><br>
+                Date of birth:<input type="text" size="10"><br>
+                Telphone:<input type="tel" size="20">
+            </fieldset>
+        </form>
+    </body>
+    </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>工具类相关</title>
+        <!--[if lt IE 9]>
+        <script src="./html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        
+        <nav>
+            <a href="http://www.baidu.com" target="_blank">百度</a>
+            <a href="http://runoob.com" >菜鸟快递</a>
+        </nav>
+        <p id="demo">点击获取您当前坐标</p>
+        <button id="btn" type="button" onclick="getLocation()">点击获取</button>
+        <form >
+            <input id="user" type="text" name="username" placeholder="用户名" required> <br>
+            <input id="pwd" type="password" name="password" placeholder="密码" required><br>
+            <input type="button" onclick="loginInto()" value ="提交">
+        </form>
+    <section style="background-color: aqua;color: azure;">
+        <p style="color: azure;">这是个段落</p>
+        段落的内容在这里，哈哈
+    </section>
+    <article>
+        <h1>新闻标题</h1>
+        <p>大萨达是科技登记卡数据库登记卡数据库来得及卡拉数据库来得及刻录机按时交路口的即可拉伸件考虑到金坷垃数据库劳动纪律</p>
+    </article>
+    <figure>
+        <img src="./images/testImage.jpg" alt="xx" width="187" height="333">
+        <figcaption>屏幕截屏</figcaption>
+    </figure>
+        <script>
+            function loginInto(){
+            var user = document.getElementById("user");
+            var pwd = document.getElementById("pwd");
+            console.log("提交的数据\n"+user.value+"\n"+pwd.value);
+            }
+            var obj = document.getElementById("btn");
+            var obj1 = document.getElementById("demo");
+            function getLocation(){
+                obj.innerText = "获取中...";
+               if(navigator.geolocation){
+                   navigator.geolocation.getCurrentPosition(getCurrentPlace,showError);
+               }else{
+                  obj.innerText = "获取失败"
+                  obj1.innerHTML = "该浏览器不支持定位"; 
+               }
+            }
+            function getCurrentPlace(position){
+                obj.innerText = "获取成功"
+                obj1.innerHTML = "纬度"+position.coords.latitude+"<br>经度"+position.coords.longitude;
+            }
+            function showError(error){
+              obj.innerText = "获取失败"
+              switch(error.code){
+                case error.PERMISSION_DENIED:
+                 obj1.innerHTML="用户拒绝对获取地理位置的请求。"
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                obj1.innerHTML="位置信息是不可用的。"
+                    break;
+                case error.TIMEOUT:
+                obj1.innerHTML="请求用户地理位置超时。"
+                    break;
+                case error.UNKNOWN_ERROR:
+                obj1.innerHTML="未知错误。"
+                    break;
+                    }
+                 }
+         if(typeof(Storage)!="undefined"){
+             localStorage.setItem("text","哈哈哈哈哈");
+            //  sessionStorage.setItem
+             obj.innerText = localStorage.getItem("text");
+         }
+
+        </script>
+    </body>
+</html>

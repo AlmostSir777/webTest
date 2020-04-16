@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="utf-8">
+        <title>h5学习</title>
+        <style type="text/css">
+        #div1{
+            float: left;
+            width: 200px;
+            height: 300px;
+            border: 1px solid #aaaaaa;
+        }
+        #div2{
+            float: left;
+            width: 200px;
+            height: 300px;
+            border: 1px solid #aaaaaa;
+        }
+        </style>
+        <script>
+            function allowDrop(ev){
+               ev.preventDefault();
+            }
+            function drag(ev){
+                ev.dataTransfer.setData("text",ev.target.id);
+            }
+            function drop(ev){
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+        <!-- <script>
+            document.createComment("myHero")
+        </script>
+        <style>
+            myHero {
+              display: block;  
+              background-color: aqua;
+              padding: 50px;
+              font-size: 30px;    
+            }
+        </style> -->
+    </header>
+    <body>
+    <!-- <p>image to use:</p> -->
+    <!-- <img id="scream" src="./images/testImage.jpg" width="187" height="333"><br>
+     <canvas id="mycavas" width="375" height="667" style="border: 1px solid #000000;">你的浏览器不知道HTML5 cavas 标签</canvas>
+    <script>
+        var myCavas = document.getElementById("mycavas");
+        var ctx = myCavas.getContext("2d");
+        // ctx.fillStyle = "#ff0000";
+        // ctx.fillRect(0,0,200,100);
+        // ctx.beginPath();
+        // ctx.arc(95,50,40,0,2*Math.PI);
+        // ctx.stroke();
+        // ctx.moveTo(0,0);
+        // ctx.lineTo(200,100);
+        // ctx.stroke();
+        // ctx.moveTo(200,0);
+        // ctx.lineTo(0,100);
+        // ctx.stroke();
+        // ctx.font="30px Arial";
+        // ctx.fillText("hello cavas",10,50);
+        // var grd = ctx.createLinearGradient(0,0,200,0);
+        // grd.addColorStop(0,"red");
+        // grd.addColorStop(1,"white");
+        // ctx.fillStyle=grd;
+        // ctx.fillRect(10,10,150,80);
+        var img = document.getElementById("scream");
+        img.onload = function(){
+            ctx.drawImage(img,10,10);
+        }
+    </script>
+    <br> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"></polygon>
+    </svg> -->
+    <p>拖到图像值矩形框</p>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="./images/testImage.jpg" draggable="true" ondragstart="drag(event)" width="187/2" height="333/2">
+    </body>
+</html>
