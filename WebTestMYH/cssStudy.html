@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css 学习</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+            }
+            .header{
+                color: white;
+                text-align: center;
+                padding: 15px;
+                background-color: #2196f3;
+            }
+            .footer{
+                background-color: #444;
+                color: white;
+                padding: 15px;
+            }
+            .topmenu{
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: dimgray;  
+            }
+            .topmenu li{
+              float: left;
+            }
+            .topmenu li a{
+              display: inline-block;
+              color: white;
+              text-align: center;
+              padding: 16px;
+              text-decoration: none;
+            }
+            .topmenu li a:hover{
+                color: white;
+                background-color: teal;
+            }
+            .topmenu li a.active{
+                color: white;
+                background-color: thistle;
+            }
+            .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+          .sidemenu{
+              width: 25%;
+          }
+          .content{
+              width: 75%;
+          }
+          .column{
+              float: left;
+              padding: 15px;
+          }
+          .sidemenu ul{
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+          }
+          .sidemenu li a{
+             background-color: lightgray;
+             margin-bottom: 4px;
+             padding: 8px;
+             text-align: left;
+             color: black;
+             text-decoration: none;
+             display: block;
+          }
+          .sidemenu li a:hover{
+            background-color: #555;
+            color: white;  
+          }
+          .sidemenu li a.active{
+            background-color: cornflowerblue;
+            color: white;
+          }
+        </style>
+    </head>
+    <body>
+        <ul class="topmenu">
+            <li><a href="ww.baidu.com" class="active">主页</a></li>
+            <li><a>新闻</a></li>
+            <li><a>联系我们</a></li>
+            <li><a>关于我们</a></li>
+        </ul>
+        <div class="clearfix">
+            <div class="column sidemenu">
+            <ul>
+                <li><a href="#flight">the fight</a></li>
+                <li><a href="#city" class="active">the city</a></li>
+                <li><a href="#island">the island</a></li>
+                <li><a href="#food">the food</a></li>
+                <li><a href="#people">the people</a></li>
+                <li><a href="#history">the history</a></li>
+                <li><a href="#oceans">the oceans</a></li>
+            </ul>
+            </div>
+            <div class="column content">
+                <div class="header">
+                    <h1>the city</h1>
+                </div>
+                <h1>china</h1>
+                <p>
+                    Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+                </p>
+                <p>
+                    You will learn more about responsive web pages in a later chapter.
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>底部文本</p>
+        </div>
+    </body>
+</html>
